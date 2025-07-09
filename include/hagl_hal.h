@@ -45,8 +45,14 @@ extern "C" {
 #include "hagl_hal_color.h"
 
 /* HAL must provide display dimensions and depth. */
+#ifndef HAGL_SDL2_DISPLAY_WIDTH
 #define HAGL_SDL2_DISPLAY_WIDTH     (320)
+#endif
+
+#ifndef HAGL_SDL2_DISPLAY_HEIGHT
 #define HAGL_SDL2_DISPLAY_HEIGHT    (240)
+#endif
+
 #define HAGL_SDL2_DISPLAY_DEPTH     (16)
 #define HAGL_CHAR_BUFFER_SIZE       (16 * 16 * HAGL_SDL2_DISPLAY_DEPTH / 8)
 
